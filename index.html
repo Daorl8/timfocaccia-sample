@@ -33,7 +33,7 @@
 :root{
  --bg:#FFFFFF; --bg2:#F6F6F4; --card:#FFFFFF; --cream:#F3F3F1;
  --ink:#2A2018; --ink2:#6E5C46; --faint:#A8967E;
- --red:#C0392B; --red-d:#A32E22; --sky:#3C6E94; --sky-d:#2F5878; --pink:#E5A9A9;
+ --red:#C0392B; --red-d:#A32E22; --grn:#3E7A4E; --grn-d:#2F5E3C; --pink:#E5A9A9;
  --line:#E2D4B5;
  --disp:'Oswald','Pretendard Variable',sans-serif;
  --script:'Caveat',cursive;
@@ -52,8 +52,8 @@ section{position:relative}
 h1,h2,h3{font-family:var(--disp);font-weight:300;line-height:1;letter-spacing:.01em;text-transform:uppercase}
 .script{font-family:var(--script);text-transform:none;font-weight:700;color:var(--red);letter-spacing:0}
 /* awning stripe motif (deli) */
-.stripe{height:16px;background:repeating-linear-gradient(90deg,var(--red) 0 26px,#fff 26px 52px,var(--sky) 52px 78px,#fff 78px 104px)}
-.stripe.sky{background:repeating-linear-gradient(90deg,var(--sky) 0 26px,var(--cream) 26px 52px)}
+.stripe{height:16px;background:repeating-linear-gradient(90deg,var(--grn) 0 26px,#fff 26px 52px,var(--red) 52px 78px,#fff 78px 104px)}
+.stripe.grn{background:repeating-linear-gradient(90deg,var(--grn) 0 26px,var(--cream) 26px 52px)}
 /* eyebrow — deli label */
 .eyebrow{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
 .eyebrow .k{font-family:var(--kr);letter-spacing:.02em;color:var(--ink2);margin-left:8px;text-transform:none;font-weight:500}
@@ -64,10 +64,10 @@ h1,h2,h3{font-family:var(--disp);font-weight:300;line-height:1;letter-spacing:.0
 .btn-fill:hover{transform:translateY(-2px);background:var(--red-d)}
 .btn-ol{background:transparent;color:var(--red-d);border:1.7px solid var(--red)}
 .btn-ol:hover{background:var(--red);color:#fff;transform:translateY(-2px)}
-.btn-ol-sky{background:transparent;color:var(--sky);border:1.7px solid var(--sky)}
-.btn-ol-sky:hover{background:var(--sky);color:#fff;transform:translateY(-2px)}
-.btn-sky{background:var(--sky);color:#fff}
-.btn-sky:hover{transform:translateY(-2px);background:var(--sky-d)}
+.btn-ol-grn{background:transparent;color:var(--grn);border:1.7px solid var(--grn)}
+.btn-ol-grn:hover{background:var(--grn);color:#fff;transform:translateY(-2px)}
+.btn-grn{background:var(--grn);color:#fff}
+.btn-grn:hover{transform:translateY(-2px);background:var(--grn-d)}
 
 /* header */
 .hdr{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .35s var(--ease),box-shadow .35s,border-color .35s}
@@ -90,7 +90,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:300;line-height:1;letter-spacing:.0
 .hero{padding:calc(var(--bar) + 30px) 0 0;overflow:hidden}
 .hero-in{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,5vw,64px);align-items:center;min-height:64vh}
 .hero .eyebrow{display:inline-block;margin-bottom:20px}
-.hero h1{font-family:var(--disp);font-weight:300;font-size:clamp(3.2rem,7.6vw,6rem);line-height:.9;letter-spacing:.01em}
+.hero h1{font-family:var(--disp);font-weight:300;font-size:clamp(2.4rem,8.4vw,5rem);line-height:.95;letter-spacing:.01em;white-space:nowrap}
 .hero h1 em{font-style:normal;color:var(--red)}
 .hero .lead{margin-top:24px;font-size:1.05rem;color:var(--ink2);max-width:28em;line-height:1.8}
 .hero-cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
@@ -129,7 +129,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:300;line-height:1;letter-spacing:.0
 .mnote{margin-top:26px;text-align:center;font-size:.9rem;color:var(--ink2)}
 
 /* strip band */
-.band{background:var(--sky);color:#fff}
+.band{background:var(--grn);color:#fff}
 .band-in{display:grid;grid-template-columns:1fr 1fr;align-items:center}
 .band-txt{padding:clamp(40px,6vw,80px) clamp(30px,5vw,64px)}
 .band-txt .eyebrow{color:#DBE2C1}
@@ -157,7 +157,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:300;line-height:1;letter-spacing:.0
 @media(hover:hover){.loc:hover .ph img{transform:scale(1.04)}}
 .loc-body{padding:clamp(22px,2.6vw,32px);flex:1;display:flex;flex-direction:column}
 .loc-name{font-family:var(--disp);font-weight:800;font-size:1.5rem;letter-spacing:-.02em;display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
-.loc-name span{font-family:var(--sans);font-weight:600;font-size:.66rem;letter-spacing:.06em;color:#fff;background:var(--sky);border-radius:999px;padding:3px 10px;text-transform:uppercase}
+.loc-name span{font-family:var(--sans);font-weight:600;font-size:.66rem;letter-spacing:.06em;color:#fff;background:var(--grn);border-radius:999px;padding:3px 10px;text-transform:uppercase}
 .vrow{display:flex;gap:14px;padding:11px 0;border-bottom:1px dotted var(--line)}
 .vrow:last-of-type{border-bottom:0}
 .vrow .k{font-family:var(--sans);font-weight:600;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red-d);width:70px;flex-shrink:0;padding-top:3px}
@@ -173,7 +173,7 @@ footer{background:var(--ink);color:#E9DCC9;padding:clamp(48px,7vw,80px) 0 90px}
 .foot-brand p{font-size:.9rem;color:#B8A88F;line-height:1.8;max-width:26em}
 .foot-links{display:flex;gap:24px;flex-wrap:wrap}
 .foot-links a{font-family:var(--sans);font-size:.85rem;color:#E9DCC9;opacity:.85;transition:.2s;border-bottom:1px solid transparent;padding-bottom:2px}
-.foot-links a:hover{opacity:1;border-bottom-color:var(--sky)}
+.foot-links a:hover{opacity:1;border-bottom-color:var(--grn)}
 .foot-cr{margin-top:28px;font-family:var(--sans);font-size:.76rem;color:#8C7C64;line-height:1.9}
 
 /* quickbar */
@@ -235,12 +235,12 @@ footer a:focus-visible,.drawer a:focus-visible,.band a:focus-visible{outline-col
   <div class="wrap hero-in">
     <div class="hero-txt">
       <span class="eyebrow">Handmade focaccia &amp; baguette.</span>
-      <h1>Tim<br><em>Focaccia</em></h1>
+      <h1>Tim <em>Focaccia</em></h1>
       <p class="script" style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin-top:12px;line-height:1">fatto a mano ~ every morning</p>
       <p class="lead">Baked fresh every day and piled high with the good stuff.</p>
       <div class="hero-cta">
         <a class="btn btn-fill" href="#location">Find us</a>
-        <a class="btn btn-ol-sky" href="https://www.instagram.com/timfocacciaiksun/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-ol-grn" href="https://www.instagram.com/timfocacciaiksun/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
     <div class="hero-media rv">
@@ -319,7 +319,7 @@ footer a:focus-visible,.drawer a:focus-visible,.band a:focus-visible{outline-col
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>
               Naver Map
             </a>
-            <a class="btn btn-sky" href="https://www.instagram.com/timfocacciaiksun/" target="_blank" rel="noopener">Instagram</a>
+            <a class="btn btn-grn" href="https://www.instagram.com/timfocacciaiksun/" target="_blank" rel="noopener">Instagram</a>
           </div>
         </div>
       </article>
@@ -335,7 +335,7 @@ footer a:focus-visible,.drawer a:focus-visible,.band a:focus-visible{outline-col
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>
               Naver Map
             </a>
-            <a class="btn btn-sky" href="https://www.instagram.com/timfocacciaiksun/" target="_blank" rel="noopener">Instagram</a>
+            <a class="btn btn-grn" href="https://www.instagram.com/timfocacciaiksun/" target="_blank" rel="noopener">Instagram</a>
           </div>
         </div>
       </article>
