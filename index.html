@@ -33,7 +33,7 @@
 :root{
  --bg:#FFFFFF; --bg2:#F6F6F4; --card:#FFFFFF; --cream:#F3F3F1;
  --ink:#2A2018; --ink2:#6E5C46; --faint:#A8967E;
- --red:#C0392B; --red-d:#A32E22; --sky:#5A7385; --sky-d:#46596A; --pink:#E5A9A9;
+ --red:#C0392B; --red-d:#A32E22; --sky:#3C6E94; --sky-d:#2F5878; --pink:#E5A9A9;
  --line:#E2D4B5;
  --disp:'Oswald','Pretendard Variable',sans-serif;
  --script:'Caveat',cursive;
@@ -52,7 +52,7 @@ section{position:relative}
 h1,h2,h3{font-family:var(--disp);font-weight:300;line-height:1;letter-spacing:.01em;text-transform:uppercase}
 .script{font-family:var(--script);text-transform:none;font-weight:700;color:var(--red);letter-spacing:0}
 /* awning stripe motif (deli) */
-.stripe{height:16px;background:repeating-linear-gradient(90deg,var(--red) 0 26px,var(--cream) 26px 52px)}
+.stripe{height:16px;background:repeating-linear-gradient(90deg,var(--red) 0 26px,#fff 26px 52px,var(--sky) 52px 78px,#fff 78px 104px)}
 .stripe.sky{background:repeating-linear-gradient(90deg,var(--sky) 0 26px,var(--cream) 26px 52px)}
 /* eyebrow — deli label */
 .eyebrow{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
@@ -64,6 +64,8 @@ h1,h2,h3{font-family:var(--disp);font-weight:300;line-height:1;letter-spacing:.0
 .btn-fill:hover{transform:translateY(-2px);background:var(--red-d)}
 .btn-ol{background:transparent;color:var(--red-d);border:1.7px solid var(--red)}
 .btn-ol:hover{background:var(--red);color:#fff;transform:translateY(-2px)}
+.btn-ol-sky{background:transparent;color:var(--sky);border:1.7px solid var(--sky)}
+.btn-ol-sky:hover{background:var(--sky);color:#fff;transform:translateY(-2px)}
 .btn-sky{background:var(--sky);color:#fff}
 .btn-sky:hover{transform:translateY(-2px);background:var(--sky-d)}
 
@@ -232,13 +234,13 @@ footer a:focus-visible,.drawer a:focus-visible,.band a:focus-visible{outline-col
 <section class="hero">
   <div class="wrap hero-in">
     <div class="hero-txt">
-      <span class="eyebrow">Salumeria · Paninoteca<span class="k">수제 샌드위치 전문</span></span>
-      <h1>Handmade<br><em>focaccia</em> &amp;<br>baguette.</h1>
+      <span class="eyebrow">Handmade focaccia &amp; baguette.</span>
+      <h1>Tim<br><em>Focaccia</em></h1>
       <p class="script" style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin-top:12px;line-height:1">fatto a mano ~ every morning</p>
-      <p class="lead">Baked fresh every day and piled high with the good stuff — a little taste of Italy in Hyehwa &amp; Ikseon, Seoul.</p>
+      <p class="lead">Baked fresh every day and piled high with the good stuff.</p>
       <div class="hero-cta">
         <a class="btn btn-fill" href="#location">Find us</a>
-        <a class="btn btn-ol" href="https://www.instagram.com/timfocacciaiksun/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-ol-sky" href="https://www.instagram.com/timfocacciaiksun/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
     <div class="hero-media rv">
@@ -256,7 +258,7 @@ footer a:focus-visible,.drawer a:focus-visible,.band a:focus-visible{outline-col
     <div class="about-txt rv">
       <span class="eyebrow">La nostra storia<span class="k">소개</span></span>
       <h2>Bread first.<br><em>Always.</em></h2>
-      <p>Every focaccia and baguette is baked by hand, in-house, each and every morning. We fill them generously with fresh, carefully sourced ingredients — because a great sandwich always starts with great bread.</p>
+      <p>Every focaccia and baguette is baked by hand, in-house, each and every morning. We fill them generously with fresh, carefully sourced ingredients, because a great sandwich always starts with great bread.</p>
       <p>매일 아침 직접 굽는 수제 포카치아·바게트에 신선한 재료를 아낌없이 넣어 준비합니다. 혜화동에서 시작해 익선점을 새롭게 열었어요.</p>
     </div>
     <figure class="about-media rv"><img src="tim-ham.webp" alt="신선한 햄과 재료로 채운 샌드위치" loading="lazy"></figure>
@@ -269,7 +271,7 @@ footer a:focus-visible,.drawer a:focus-visible,.band a:focus-visible{outline-col
     <div class="band-txt rv">
       <span class="eyebrow">Fatto in casa</span>
       <h2>Made by hand,<br>every morning.</h2>
-      <p>수제 잠봉과 샤퀴테리, 매일 반죽해 구워내는 포카치아와 바게트까지 — 기본에 충실한 맛을 위해 손이 많이 가는 과정을 마다하지 않습니다.</p>
+      <p>수제 잠봉과 프로마쥬, 매일 반죽해 구워내는 포카치아와 바게트까지 풍성한 맛을 위해 손이 많이 가는 과정을 마다하지 않습니다.</p>
     </div>
     <figure class="band-media rv"><img src="tim-bread-tim.webp" alt="TIM 각인이 새겨진 갓 구운 빵" loading="lazy"></figure>
   </div>
@@ -302,7 +304,7 @@ footer a:focus-visible,.drawer a:focus-visible,.band a:focus-visible{outline-col
     <div class="sec-head rv">
       <span class="eyebrow">Dove siamo<span class="k">오시는 길</span></span>
       <h2>Two shops, <em>one Tim.</em></h2>
-      <p>서울 혜화와 익선, 두 곳에서 만나요.</p>
+      <p>서울 혜화와 익선, 두 곳에 매장이 있습니다.</p>
     </div>
     <div class="loc-grid">
       <article class="loc rv">
